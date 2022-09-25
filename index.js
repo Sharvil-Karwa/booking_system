@@ -14,6 +14,11 @@ mongoose
   .then(() => {
     const app = express();
     app.use(express.json());
+    app.get("/", (req, res) => {
+      res.send(
+        "/api/available - GET all tickets. /api/details/:number - GET ticket details. /api/bookTicket - POST book ticket. /api/create - create 500 tickets."
+      );
+    });
     app.use("/api", cors(), ticketRoutes);
     app.listen(process.env.PORT || 5000, () => {
       console.log("Server has started!");
