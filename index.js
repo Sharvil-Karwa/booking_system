@@ -16,7 +16,7 @@ mongoose
     app.use(express.json());
     app.get("/", (req, res) => {
       res.send(
-        "/api/available - GET all tickets. /api/details/:number - GET ticket details. /api/bookTicket - POST book ticket. /api/create - create 500 tickets."
+        "/api/available - GET all tickets, /api/details/:number - GET ticket details, /api/bookTicket - POST book ticket, /api/create - create 500 tickets."
       );
     });
     app.use("/api", cors(), ticketRoutes);
